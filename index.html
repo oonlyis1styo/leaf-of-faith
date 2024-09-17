@@ -10,6 +10,31 @@
 
     <!-- Title -->
     <title>leaf of faith</title>
+    <style>
+        .bt {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .alazea-bt {
+            background-color: #70c745;
+            color: white;
+        }
+        .btn.clicked {
+            background-color: #4CAF50;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+    </style>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -830,14 +855,23 @@
                     <!-- Section Heading -->
                     <div class="section-heading mb-0">
                         <h2>first purchase?</h2>
-                        <p>we will send you a promo code to your mail!</p>
+                        <p>creat an account and well send you a promo code</p>
                     </div>
                 </div>
                 <div class="col-12 col-lg-6">
                     <div class="subscribe-form">
                         <form action="#" method="get">
                             <input type="email" name="subscribe-email" id="subscribeEmail" placeholder="Enter your email">
-                            <button type="submit" class="btn alazea-btn">SUBSCRIBE</button>
+                            <input type="email" name="subscribe-email" id="subscribeEmail" placeholder="enter your password">
+                            <button type="submit" class="bt alazea-bt">SIGN UP</button>
+                              <script>
+                                  const btn = document.getElementById('signupBtn');
+                                  btn.addEventListener('click', function() {
+                                  this.classList.add('clicked');
+                                  this.innerHTML = '✓';
+                                  this.disabled = true;
+                                  });
+                              </script>
                         </form>
                     </div>
                 </div>
